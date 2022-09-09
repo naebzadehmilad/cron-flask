@@ -1,0 +1,11 @@
+[Unit]
+Description=Flask web server cron
+[Install]
+WantedBy=multi-user.target
+[Service]
+User=root
+PermissionsStartOnly=true
+ExecStart=main.py
+TimeoutSec=600
+Restart=on-failure
+RuntimeDirectoryMode=755
